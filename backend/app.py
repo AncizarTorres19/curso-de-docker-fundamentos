@@ -13,13 +13,13 @@ def getMyInfo():
         "name": "Ancizar",
         "lastname": "Torres",
         "socialMedia": {
-            "facebookUser": "Ancizar",
-            "instagramUser": "Ancizar",
-            "xUser": "Ancizar",
-            "linkedin": "Ancizar",
-            "githubUser": "AncizarTorres19"
+            "facebook": "https://www.facebook.com/share/19dm25eUx6/",
+            "instagram": "https://www.instagram.com/ancizar_torres19",
+            "linkedin": "https://www.linkedin.com/in/ancizar-torres-lopez-673a591a1",
+            "github": "https://github.com/AncizarTorres19"
         },
-        "blog": "https://github.com/AncizarTorres19",
+        "portfolio": "https://ancizartorres19.github.io/portafolio-personal",
+        "portfolioRepo": "https://github.com/AncizarTorres19/portafolio-personal",
         "author": "Ancizar Torres"
     }
 

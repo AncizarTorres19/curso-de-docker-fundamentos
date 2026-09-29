@@ -16,12 +16,12 @@ var requestOptions = {
   .then(json => {
     document.getElementById("name").textContent = json.name + " " + json.lastname;
     document.getElementById("author").textContent = "© 2026 · Hecho por " + json.author;
-    document.getElementById("facebookLink").href = "https://www.facebook.com/" + json.socialMedia.facebookUser;
-    document.getElementById("instagramUser").href = "https://www.instagram.com/" + json.socialMedia.instagramUser;
-    document.getElementById("xUser").href = "https://www.x.com/" + json.socialMedia.xUser;
-    document.getElementById("githubUser").href = "https://www.github.com/" + json.socialMedia.githubUser;
-    document.getElementById("linkedinUser").href = "https://www.linkedin.com/in/" + json.socialMedia.linkedin;
-    document.getElementById("website").href = json.blog;
+    document.getElementById("facebookLink").href = json.socialMedia.facebook;
+    document.getElementById("instagramUser").href = json.socialMedia.instagram;
+    document.getElementById("githubUser").href = json.socialMedia.github;
+    document.getElementById("linkedinUser").href = json.socialMedia.linkedin;
+    document.getElementById("website").href = json.portfolio;
+    document.getElementById("websiteRepo").href = json.portfolioRepo;
   })
   // Sin backend la página se queda con los datos estáticos del HTML
   .catch(error => console.error("getMyInfo:", error));
