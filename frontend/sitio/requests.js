@@ -18,6 +18,7 @@ var requestOptions = {
     document.getElementById("author").textContent = "© 2026 · Hecho por " + json.author;
     document.getElementById("facebookLink").href = json.socialMedia.facebook;
     document.getElementById("instagramUser").href = json.socialMedia.instagram;
+    document.getElementById("xUser").href = json.socialMedia.x;
     document.getElementById("githubUser").href = json.socialMedia.github;
     document.getElementById("linkedinUser").href = json.socialMedia.linkedin;
     document.getElementById("website").href = json.portfolio;

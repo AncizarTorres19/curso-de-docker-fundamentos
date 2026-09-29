@@ -15,6 +15,7 @@ def getMyInfo():
         "socialMedia": {
             "facebook": "https://www.facebook.com/share/19dm25eUx6/",
             "instagram": "https://www.instagram.com/ancizar_torres19",
+            "x": "https://x.com/ancizardev",
             "linkedin": "https://www.linkedin.com/in/ancizar-torres-lopez-673a591a1",
             "github": "https://github.com/AncizarTorres19"
         },
