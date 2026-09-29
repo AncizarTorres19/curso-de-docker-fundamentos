@@ -1,121 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">    
+<meta name="description" content="Enlaces de Ancizar Torres" />
 <title>Ancizar Torres - Links</title>
-<script src="https://unpkg.com/feather-icons"></script>
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+:root {
+  --bg: #0b0f14;
+  --surface: #121821;
+  --surface-hover: #182130;
+  --border: #243041;
+  --text: #e6edf3;
+  --muted: #8b98a9;
+  --accent: #38bdf8;
+  --accent-strong: #0ea5e9;
+}
+
+* { box-sizing: border-box; margin: 0; }
+
 body {
-  background: url("https://www.w3schools.com/howto/img_link_tree_template2_bg.jpg"); /* The image used for background */
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.links-container {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(900px 500px at 50% -10%, rgba(56, 189, 248, .14), transparent 70%),
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--bg);
   display: flex;
-  flex-direction: column;
-  jusify-content: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+main { width: 100%; max-width: 480px; }
+
+.profile { text-align: center; margin-bottom: 36px; }
+
+.avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 6px rgba(56, 189, 248, .12);
+}
+
+h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  margin-top: 18px;
+}
+
+.tagline { color: var(--muted); margin-top: 6px; font-size: .95rem; }
+
+.badge {
+  display: inline-flex;
   align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 5px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: .8rem;
+  color: var(--muted);
 }
 
-.links-container a {
-  width: 80%;
+.badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
 }
 
-.w3-theme-l1:hover {
-  background-color: #f279a1 !important;
+h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 28px 0 12px 4px;
 }
 
-.margin-top-2 {
-  margin-top: 32px;
+.links { display: grid; gap: 10px; }
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background .15s, border-color .15s, transform .15s;
 }
 
-.bottom {
-  width: 100%;
+.link:hover {
+  background: var(--surface-hover);
+  border-left-color: var(--accent);
+  transform: translateX(3px);
+}
+
+.link:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.link svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--accent); }
+
+.link span { flex: 1; }
+
+.link .arrow { width: 16px; height: 16px; color: var(--muted); transition: color .15s; }
+
+.link:hover .arrow { color: var(--accent); }
+
+footer {
+  margin-top: 40px;
   text-align: center;
-  width: auto;
-  font-weight: bolder;
+  font-size: .85rem;
+  color: var(--muted);
 }
 
-.bottom span {
-  color: #ed4d82;
-}
-
-.bottom svg {
-  stroke: #ed4d82;
-  fill: #ed4d82;
-}
-
-@media (min-width: 768px) {
-  .link {
-    width: 100%;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+@media (prefers-reduced-motion: reduce) {
+  .link { transition: none; }
+  .link:hover { transform: none; }
 }
 </style>
-  </head>
-  <body>
-    <!-- Content container -->
-    <div class="container">
+</head>
+<body>
+  <main>
+    <header class="profile">
+      <img src="foto.jpg" class="avatar" alt="Foto de Ancizar Torres" width="128" height="128">
+      <h1 id="name">Ancizar Torres</h1>
+      <p class="tagline">Docker · Azure Container Apps · Cloud</p>
+      <span class="badge">Disponible para proyectos</span>
+    </header>
 
-      <!-- Image and name container. Change to your pictue here. -->
-      <div style="text-align: center">
-        <img src="foto.jpg" class="w3-margin" alt="Foto de Ancizar Torres" width="150px" height="150px" style="border-radius: 50%; object-fit: cover;">
-        <p ><span class="name w3-padding w3-pink w3-round" style="font-weight: bolder;" id="name">Hola, no funcionas</span></p>
-        <p style="font-weight: bolder;">¡Mira mis enlaces!</p>
-      </div>
+    <h2 id="h-redes">Redes sociales</h2>
+    <nav class="links" aria-labelledby="h-redes">
+      <a id="githubUser" href="https://github.com/AncizarTorres19" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        <span>GitHub</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a id="facebookLink" href="#" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        <span>Facebook</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a id="instagramUser" href="#" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+        <span>Instagram</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a id="xUser" href="#" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M20 4 4 20"/></svg>
+        <span>X</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </nav>
 
-      <!-- Links section 1. Replace the # inside of the "" with your links. -->
-      <h4 class="margin-top-2" style="text-align: center;">MIS REDES SOCIALES</h4>
-      <div class="links-container">
-        <a id="facebookLink" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Facebook</a>
-        <br>
-        <a id="instagramUser" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Instagram</a>
-        <br>
-        <a id="xUser" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">X</a>
-        <br>
-        <a id="githubUser" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">Github</a>
-      </div>
+    <h2 id="h-exp">Experiencia</h2>
+    <nav class="links" aria-labelledby="h-exp">
+      <a id="linkedinUser" href="#" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+        <span>LinkedIn</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </nav>
 
-      <!-- Links section 2. Replace the # inside of the "" with your links. -->
-      <h4 class="margin-top-2" style="text-align: center;">MI EXPERIENCIA</h4>
-      <div class="links-container">
-        <a id="linkedinUser" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">LinkedIn</a>
-      </div>
+    <h2 id="h-blog">Blog</h2>
+    <nav class="links" aria-labelledby="h-blog">
+      <a id="website" href="https://github.com/AncizarTorres19" class="link" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+        <span>Mi blog</span>
+        <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </nav>
 
-      <!-- Links section 3. Replace the # inside of the "" with your links. -->
-      <h4 class="margin-top-2" style="text-align: center;">MI BLOG</h4>
-      <div class="links-container">
-        <a id="website" href="#" class="w3-button w3-round-xlarge w3-theme-l1 w3-border link" target="_blank">|</a>
-      </div>
+    <footer id="author">© 2026 · Hecho por Ancizar Torres</footer>
+  </main>
 
-      <!-- Bottom section 3 -->
-      <div class="bottom margin-top-2 w3-padding w3-round">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-        <span id="author" style="vertical-align: 7px;"> 2026 - Hecho por Ancizar Torres</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-      </div>
-
-    </div>
-    <script>
-      feather.replace()
-    </script>
-    <script src="/config.js"></script>
-    <script type="text/javascript" src="/requests.js"></script>
-  </body>  
+  <script src="/config.js"></script>
+  <script src="/requests.js"></script>
+</body>
 </html>

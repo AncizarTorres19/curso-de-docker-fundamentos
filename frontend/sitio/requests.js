@@ -9,14 +9,13 @@ var requestOptions = {
   fetch(endpoint, requestOptions)
   .then(res => {
     if (!res.ok) {
-      alert("HTTP error! status:" + res.status);
-      throw new Error('Network response was not ok');
+      throw new Error('HTTP ' + res.status);
     }
     return res.json();
   })
   .then(json => {
-    document.getElementById("name").textContent = "Hola " + json.name + " " + json.lastname;
-    document.getElementById("author").textContent = "2026 - Hecho por " + json.author;
+    document.getElementById("name").textContent = json.name + " " + json.lastname;
+    document.getElementById("author").textContent = "© 2026 · Hecho por " + json.author;
     document.getElementById("facebookLink").href = "https://www.facebook.com/" + json.socialMedia.facebookUser;
     document.getElementById("instagramUser").href = "https://www.instagram.com/" + json.socialMedia.instagramUser;
     document.getElementById("xUser").href = "https://www.x.com/" + json.socialMedia.xUser;
@@ -24,4 +23,5 @@ var requestOptions = {
     document.getElementById("linkedinUser").href = "https://www.linkedin.com/in/" + json.socialMedia.linkedin;
     document.getElementById("website").href = json.blog;
   })
-  .catch(error => alert("error: " + error));
+  // Sin backend la página se queda con los datos estáticos del HTML
+  .catch(error => console.error("getMyInfo:", error));
